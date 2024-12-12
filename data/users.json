@@ -1,0 +1,44 @@
+{
+    "users": [
+        {
+            "id":1,
+            "name": "John Doe",
+            "age": 30,
+            "email": "johndoe@example.com",
+            "phone": "+1234567890",
+            "city": "New Delhi"
+        },
+        {
+            "id":2,
+            "name": "Jane Smith",
+            "age": 25,
+            "email": "janesmith@example.com",
+            "phone": "+0987654321",
+            "city": "Mumbai"
+        },
+        {
+            "id":3,
+            "name": "Alice Johnson",
+            "age": 28,
+            "email": "alicejohnson@example.com",
+            "phone": "+1123456789",
+            "city": "Bangalore"
+        },
+        {
+            "id":4,
+            "name": "Bob Brown",
+            "age": 35,
+            "email": "bobbrown@example.com",
+            "phone": "+1223456789",
+            "city": "Chennai"
+        },
+        {
+            "id":5,
+            "name": "Charlie Davis",
+            "age": 32,
+            "email": "charliedavis@example.com",
+            "phone": "+1323456789",
+            "city": "Hyderabad"
+        }
+    ]
+}
