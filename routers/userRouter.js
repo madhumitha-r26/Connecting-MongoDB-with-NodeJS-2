@@ -63,4 +63,49 @@ router.post("/", async (req, res) => {
   });
 });
 
+//------------ delete user -----------------
+router.delete("/:id", async (req, res) => {
+  const id = parseInt(req.params.id);
+  const user = await UserModel.findOne({ id: id });
+
+  if (user) {
+    await user.deleteOne();
+    res.status(200).json({
+      success: true,
+      message: "User deleted successfully",
+    });
+  } else {
+    res.status(404).json({
+      success: false,
+      message: "User not found",
+    });
+  }
+});
+
+
+//------------ update user -----------------
+router.put("/:id", async (req, res) => {
+  const id = parseInt(req.params.id);
+  const { name, age, email, phone, city } = req.body;
+  const user = await UserModel.findOne({ id: id });
+  if (user) {
+    user.name=name;
+    user.age = age;
+    user.email = email;
+    user.phone = phone;
+    user.city = city;
+    await user.save();
+    res.status(200).json({
+      success: true,
+      message: "User updated successfully",
+      data: user,
+    });
+  } else {
+    res.status(404).json({
+      success: false,
+      message: "User not found",
+    });
+  }
+});
+
 module.exports = router;
